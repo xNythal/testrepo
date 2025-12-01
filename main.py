@@ -16,7 +16,7 @@ match command:
         subprocess.run(("git", "push", *options))
     case "commit":
         if "-m" not in options:
-            options.append("-m " + input("Commit Message: "))
+            options.extend(["-m", input("Commit Message: ")])
         subprocess.run(("git", "commit", *options))
     case "add":
         subprocess.run(("git", "add", *options))
