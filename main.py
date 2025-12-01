@@ -13,11 +13,9 @@ options = args[1:]
 
 match command:
     case "push":
-        print("pushing...")
-    case "pull":
-        print("pulling...")
-    case "clone":
-        print("cloning...")
+        subprocess.run(("git", "push", *options))
+    case "commit":
+        subprocess.run(("git", "commit", *options))
     case "add":
         subprocess.run(("git", "add", *options))
     case "remote":
