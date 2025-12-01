@@ -24,3 +24,4 @@ match command:
         subprocess.run(("git", "init", *options))
     case _:
         subprocess.run(("git", command, *options))
+#
